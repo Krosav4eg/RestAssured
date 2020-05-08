@@ -1,0 +1,32 @@
+<div>POST to https://api.todoist.com/rest/v1/tasks</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+    {
+    &quot;content&quot;: &quot;Appointment with Maria&quot;,
+    &quot;due_string&quot;: &quot;tomorrow at 12:00&quot;,
+    &quot;due_lang&quot;: &quot;en&quot;,
+    &quot;priority&quot;: -1
+}
+    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Bearer 8ac3f173ac0b530f7f77d4858d7e41ce801bdc26</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json; charset=UTF-8</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;https://api.todoist.com/rest/v1/tasks&#39; -H &#39;Authorization: Bearer 8ac3f173ac0b530f7f77d4858d7e41ce801bdc26&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json; charset=UTF-8&#39; -d &#39;{
+    &quot;content&quot;: &quot;Appointment with Maria&quot;,
+    &quot;due_string&quot;: &quot;tomorrow at 12:00&quot;,
+    &quot;due_lang&quot;: &quot;en&quot;,
+    &quot;priority&quot;: -1
+}&#39;
+</div>

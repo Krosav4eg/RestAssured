@@ -1,0 +1,193 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "required": [
+    "content"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        3883864230.0
+      ]
+    },
+    "project_id": {
+      "$id": "#/properties/project_id",
+      "type": "integer",
+      "title": "The project_id schema",
+      "description": "Task project id. If not set, task is put to user’s Inbox.",
+      "default": 0,
+      "examples": [
+        2234251163.0
+      ]
+    },
+    "section_id": {
+      "$id": "#/properties/section_id",
+      "type": "integer",
+      "title": "The section_id schema",
+      "description": "ID of section to put task into.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "order": {
+      "$id": "#/properties/order",
+      "type": "integer",
+      "title": "The order schema",
+      "description": "Non-zero integer value used by clients to sort tasks under the same parent.",
+      "default": 0,
+      "examples": [
+        24.0
+      ]
+    },
+    "content": {
+      "$id": "#/properties/content",
+      "type": "string",
+      "title": "The content schema",
+      "description": "Task content.",
+      "default": "",
+      "examples": [
+        "Appointment with Maria"
+      ]
+    },
+    "completed": {
+      "$id": "#/properties/completed",
+      "type": "boolean",
+      "title": "The completed schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "label_ids": {
+      "$id": "#/properties/label_ids",
+      "type": "array",
+      "title": "The label_ids schema",
+      "description": "Ids of labels associated with the task.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/label_ids/items"
+      }
+    },
+    "priority": {
+      "$id": "#/properties/priority",
+      "type": "integer",
+      "title": "The priority schema",
+      "description": "Task priority from 1 (normal) to 4 (urgent).",
+      "default": 0,
+      "examples": [
+        4.0
+      ]
+    },
+    "comment_count": {
+      "$id": "#/properties/comment_count",
+      "type": "integer",
+      "title": "The comment_count schema",
+
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "created": {
+      "$id": "#/properties/created",
+      "type": "string",
+      "title": "The created schema",
+      "default": "",
+      "examples": [
+        "2020-05-07T14:57:41Z"
+      ]
+    },
+    "due": {
+      "$id": "#/properties/due",
+      "type": "object",
+      "title": "The due schema",
+      "description": "",
+      "default": {},
+      "examples": [
+        {
+          "string": "tomorrow at 12:00",
+          "date": "2020-05-08",
+          "timezone": "Europe/Kiev",
+          "recurring": false,
+          "datetime": "2020-05-08T09:00:00Z"
+        }
+      ],
+      "required": [],
+      "additionalProperties": true,
+      "properties": {
+        "recurring": {
+          "$id": "#/properties/due/properties/recurring",
+          "type": "boolean",
+          "title": "The recurring schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "string": {
+          "$id": "#/properties/due/properties/string",
+          "type": "string",
+          "title": "The string schema",
+          "description": "Human defined task due date (ex.: “next Monday”, “Tomorrow”). Value is set using local (not UTC) time.",
+          "default": "",
+          "examples": [
+            "tomorrow at 12:00"
+          ]
+        },
+        "date": {
+          "$id": "#/properties/due/properties/date",
+          "type": "string",
+          "title": "The date schema",
+          "description": "Specific date in YYYY-MM-DD format relative to user’s timezone.",
+          "default": "",
+          "examples": [
+            "2020-05-08"
+          ]
+        },
+        "datetime": {
+          "$id": "#/properties/due/properties/datetime",
+          "type": "string",
+          "title": "The datetime schema",
+          "description": "Specific date and time in RFC3339 format in UTC.",
+          "default": "",
+          "examples": [
+            "2020-05-08T09:00:00Z"
+          ]
+        },
+        "timezone": {
+          "$id": "#/properties/due/properties/timezone",
+          "type": "string",
+          "title": "The timezone schema",
+          "default": "",
+          "examples": [
+            "Europe/Kiev"
+          ]
+        }
+      }
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "title": "The url schema",
+      "default": "",
+      "examples": [
+        "https://todoist.com/showTask?id=3883864230"
+      ]
+    }
+  }
+}

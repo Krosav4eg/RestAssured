@@ -1,0 +1,1 @@
+{"uuid":"dec1473a-8008-4135-bf8a-0de039dbcec3","name":"restAssured","children":["03b494d8-3b3f-4bdb-a3b4-9966841a66c2"],"befores":[{"name":"setFilter","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1588878867603,"stop":1588878867611}],"afters":[],"links":[],"start":1588878867575,"stop":1588878870245}

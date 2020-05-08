@@ -1,0 +1,5 @@
+/.idea/
+/terget/
+*.iml
+/.allure/
+/allure-results/
